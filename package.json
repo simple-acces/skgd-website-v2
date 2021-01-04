@@ -1,0 +1,23 @@
+{
+  "name": "skgd-website-v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass css/",
+    "dev": "sass --watch css/ & open index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simple-acces/skgd-website-v2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simple-acces/skgd-website-v2/issues"
+  },
+  "homepage": "https://github.com/simple-acces/skgd-website-v2#readme",
+  "devDependencies": {
+    "sass": "^1.32.0"
+  }
+}
