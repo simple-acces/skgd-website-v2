@@ -2,10 +2,10 @@
   "name": "skgd-website-v2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "compile": "sass css/",
-    "dev": "sass --watch css/ & open index.html"
+    "dev": "open index.html && sass --watch css/"
   },
   "repository": {
     "type": "git",
