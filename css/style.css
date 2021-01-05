@@ -4,6 +4,12 @@ body {
   margin: 0;
   font-family: "Montserrat";
   font-weight: 500;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .white {
@@ -16,30 +22,106 @@ body {
   color: white;
 }
 
-#intro {
+.separator {
+  width: 50%;
+  margin: 50px auto;
+  height: 2px;
+}
+
+h1 {
+  text-align: center;
+  width: 100%;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+section#accueil {
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#intro .baseline {
+section#accueil .baseline {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#intro .text {
+section#accueil article {
   font-size: 30px;
   text-align: center;
 }
-#intro img {
+section#accueil img {
   width: 90%;
 }
 
-.separator {
-  width: 50%;
-  margin: 50px auto;
-  height: 2px;
+section#agence {
+  width: 100%;
+  height: 100vh;
+  --size-container: 80%;
+}
+section#agence header {
+  --header-height: 60px;
+  height: var(--header-height);
+  width: 100%;
+}
+section#agence header .container-menu {
+  width: var(--size-container);
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+section#agence header .container-menu .menu {
+  width: 100%;
+  height: 100%;
+  line-height: var(--header-height);
+  cursor: pointer;
+  text-align: center;
+}
+section#agence header .container-menu .menu:hover {
+  font-weight: 700;
+}
+section#agence .container-details {
+  display: flex;
+  justify-content: space-between;
+  width: var(--size-container);
+  margin: auto;
+}
+section#agence h1 {
+  margin: 10vh auto;
+}
+section#agence .details {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+}
+section#agence .details .number {
+  --size-detail: 30vh;
+  width: var(--size-detail);
+  max-width: 20vw;
+  height: var(--size-detail);
+  max-height: 20vw;
+  background: white;
+  border-radius: var(--size-detail);
+  font-size: calc(8vh + 5vw);
+  color: black;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto auto 50px auto;
+}
+section#agence .details .number.special {
+  font-weight: 700;
+  background-color: #fedb00;
+}
+section#agence .details h2 {
+  font-size: 24px;
+}
+section#agence .details p {
+  width: 80%;
+  margin: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
