@@ -35,9 +35,44 @@ h1 {
   font-size: 40px;
 }
 
+header {
+  height: 60px;
+  width: 100%;
+}
+header .container-menu {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+header .container-menu .menu {
+  width: 100%;
+  height: 100%;
+  line-height: 60px;
+  cursor: pointer;
+  text-align: center;
+}
+header .container-menu .menu:hover {
+  font-weight: 700;
+}
+
+body > header {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
 section#accueil {
   width: 100%;
   height: 100vh;
+  position: relative;
+  z-index: 3;
+}
+section#accueil .baseline-container {
+  width: 100%;
+  height: calc(100% - 60px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,42 +89,24 @@ section#accueil article {
 section#accueil img {
   width: 90%;
 }
+section#accueil header {
+  position: relative;
+  z-index: 1;
+}
 
 section#agence {
   width: 100%;
   height: 100vh;
-  --size-container: 80%;
-}
-section#agence header {
-  --header-height: 60px;
-  height: var(--header-height);
-  width: 100%;
-}
-section#agence header .container-menu {
-  width: var(--size-container);
-  height: 100%;
-  margin: auto;
-  display: flex;
-  align-items: center;
-}
-section#agence header .container-menu .menu {
-  width: 100%;
-  height: 100%;
-  line-height: var(--header-height);
-  cursor: pointer;
-  text-align: center;
-}
-section#agence header .container-menu .menu:hover {
-  font-weight: 700;
 }
 section#agence .container-details {
   display: flex;
   justify-content: space-between;
-  width: var(--size-container);
+  width: 80%;
   margin: auto;
 }
 section#agence h1 {
-  margin: 10vh auto;
+  padding: 10vh 0;
+  margin: 0;
 }
 section#agence .details {
   text-align: center;
@@ -124,4 +141,4 @@ section#agence .details p {
   margin: auto;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=/style.6b54f5b7.css.map */
