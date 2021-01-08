@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/countUp.min.js":[function(require,module,exports) {
+})({"node_modules/countUp.js/dist/countUp.min.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -127,11 +127,7 @@ exports.CountUp = void 0;
 
 var __assign = void 0 && (void 0).__assign || function () {
   return (__assign = Object.assign || function (t) {
-    for (var i, a = 1, s = arguments.length; a < s; a++) {
-      for (var n in i = arguments[a]) {
-        Object.prototype.hasOwnProperty.call(i, n) && (t[n] = i[n]);
-      }
-    }
+    for (var i, a = 1, s = arguments.length; a < s; a++) for (var n in i = arguments[a]) Object.prototype.hasOwnProperty.call(i, n) && (t[n] = i[n]);
 
     return t;
   }).apply(this, arguments);
@@ -166,9 +162,7 @@ var __assign = void 0 && (void 0).__assign || function () {
       if (i = Math.abs(t).toFixed(s.options.decimalPlaces), n = (a = (i += "").split("."))[0], e = a.length > 1 ? s.options.decimal + a[1] : "", s.options.useGrouping) {
         r = "";
 
-        for (var l = 0, h = n.length; l < h; ++l) {
-          0 !== l && l % 3 == 0 && (r = s.options.separator + r), r = n[h - l - 1] + r;
-        }
+        for (var l = 0, h = n.length; l < h; ++l) 0 !== l && l % 3 == 0 && (r = s.options.separator + r), r = n[h - l - 1] + r;
 
         n = r;
       }
@@ -220,7 +214,7 @@ exports.CountUp = CountUp;
 },{}],"js/script.js":[function(require,module,exports) {
 "use strict";
 
-var _countUpMin = require("./countUp.min.js");
+var _countUp = require("countUp.js");
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -240,7 +234,7 @@ var countups = function countups(goUp) {
         el = _ref2[0],
         n = _ref2[1];
 
-    return new _countUpMin.CountUp(el, goUp ? n : 0, {
+    return new _countUp.CountUp(el, goUp ? n : 0, {
       duration: 1,
       startVal: goUp ? 0 : n
     });
@@ -265,7 +259,7 @@ var initNumbers = function initNumbers() {
 addEventListener("load", function () {
   initNumbers();
 });
-},{"./countUp.min.js":"js/countUp.min.js"}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"countUp.js":"node_modules/countUp.js/dist/countUp.min.js"}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -293,7 +287,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51657" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52498" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -470,4 +464,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["node_modules/parcel/src/builtins/hmr-runtime.js","js/script.js"], null)
-//# sourceMappingURL=/script.d573be0b.js.map
+//# sourceMappingURL=script.d573be0b.js.map
